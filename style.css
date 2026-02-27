@@ -1,87 +1,140 @@
-*{
-    margin:0;
-    padding:0;
-    font-family:'Poppins','sans-serif';
-     
-
+/* ====== Base Styles ====== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'sans-serif';
 }
-body{
+
+body {
     background: #222;
 }
 
-.card{
-
-    width:70%;
+/* ====== Card Container ====== */
+.card {
+    width: 90%;
     max-width: 420px;
-    background: linear-gradient(135deg,#00feba,#5b548a);
-    color:#fff;
-    margin:100px auto 0;
+    background: linear-gradient(135deg, #00feba, #5b548a);
+    color: #fff;
+    margin: 80px auto 0;
     border-radius: 20px;
-    padding:40px 35px;
+    padding: 35px 25px;
     text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
-.search{
-
-    background-color: Gray;
-    height:65px;
-    width:350px;
-    display:flex;
+/* ====== Search Bar ====== */
+.search {
+    background-color: gray;
+    height: 65px;
+    width: 100%;
+    max-width: 350px;
+    display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 25px;
-    border:2px solid gray;
-    box-shadow: #222;
-
+    border: 2px solid gray;
+    margin: 0 auto;
 }
-.search input{
 
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    border:0;
-    outline:0;
-    background: #ebfffc;
-    color:#555;
-    padding:10px 25px;
-    height:60px;
+.search input {
+    flex: 1;
+    margin: 0 2px;
+    padding: 10px 20px;
+    height: 60px;
+    border: 0;
+    outline: 0;
     border-radius: 30px;
-    flex:1;
-    margin-right:2px;
-    margin-left:2px;
-    font-size:18px;
-
+    background: #ebfffc;
+    color: #555;
+    font-size: 1rem;
 }
 
-.search button{
-   
-     border:0;
-    outline:0;
+.search button {
+    width: 60px;
+    height: 60px;
+    border: 0;
+    outline: 0;
     background: #ebfffc;
     border-radius: 50%;
-    width:60px;
-    height:53px;
     cursor: pointer;
-}
-.search button img{
-    
-    width:55px;
-    height:40x;
-    background-size:contain;
-    
-}
-.weather-icon{
-    width:170px;
-    margin-top: 30px;
-
-}
-.tempIcon{
-
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: center;
-    
 }
-.fa-solid{
-    width:70%;
+
+.search button img {
+    width: 55px;
+    height: 40px; /* Fixed typo */
+    object-fit: contain;
+}
+
+/* ====== Weather Icon ====== */
+.weather-icon {
+    width: 170px;
+    max-width: 50%;
+    margin: 30px auto 0;
+    display: block;
+}
+
+/* ====== Temperature Icon Container ====== */
+.tempIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ====== Font Awesome Icons ====== */
+.fa-solid {
+    width: 70%;
+}
+
+/* ====== Responsive Design ====== */
+
+/* Tablets */
+@media screen and (max-width: 768px) {
+    .card {
+        width: 80%;
+        padding: 30px 20px;
+    }
+    .search {
+        max-width: 300px;
+        height: 55px;
+    }
+    .search input {
+        font-size: 16px;
+        height: 50px;
+    }
+    .search button {
+        width: 50px;
+        height: 50px;
+    }
+    .weather-icon {
+        width: 140px;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+    .card {
+        width: 95%;
+        margin-top: 50px;
+        padding: 25px 15px;
+    }
+    .search {
+        max-width: 260px;
+        height: 50px;
+    }
+    .search input {
+        font-size: 14px;
+        height: 45px;
+        padding: 8px 15px;
+    }
+    .search button {
+        width: 45px;
+        height: 45px;
+    }
+    .weather-icon {
+        width: 120px;
+    }
 }
