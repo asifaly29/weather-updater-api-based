@@ -6,10 +6,11 @@ Weather update website built using HTML, CSS, JavaScript, and API
 
 A web-based weather application that fetches live weather data using APIs.
 This project demonstrates the use of API in a website
+
 🚀 Live Demo
 
 👉 Try the App Here
-()
+https://asifaly29.github.io/weather-updater-api-based/
 
 🛠️ Technologies Used
 
